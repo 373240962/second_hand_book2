@@ -54,7 +54,8 @@ public class YonghuController {
     
 	@Autowired
 	private TokenService tokenService;
-	
+
+
 	/**
 	 * 登录
 	 */

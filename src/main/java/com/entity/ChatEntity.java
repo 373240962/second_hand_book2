@@ -68,12 +68,26 @@ public class ChatEntity<T> implements Serializable {
 	 */
 					
 	private String ask;
+
+	/**
+	 * 提问时间
+	 */
+	@JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
+	@DateTimeFormat
+	private Date askTime;
 	
 	/**
 	 * 回复
 	 */
 					
 	private String reply;
+
+	/**
+	 * 回复时间
+	 */
+	@JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
+	@DateTimeFormat
+	private Date replyTime;
 	
 	/**
 	 * 是否回复

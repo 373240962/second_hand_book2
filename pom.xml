@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.jlwl</groupId>
 	<!-- 导入项目的名称 -->
-	<artifactId>springbootoc81w</artifactId>
+	<artifactId>second-hand-book</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>springboot-schema</name>
 	<description>springboot学习框架</description>
@@ -146,6 +146,19 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<excludes>
+					<exclude>**/*.woff</exclude>
+					<exclude>**/*.woff2</exclude>
+					<exclude>**/*.ttf</exclude>
+				</excludes>
+			</resource>
+		</resources>
 	</build>
+
 
 </project>

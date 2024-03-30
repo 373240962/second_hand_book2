@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.lang.reflect.InvocationTargetException;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -123,7 +124,7 @@ public class ErshoutushuEntity<T> implements Serializable {
 	 * 价格
 	 */
 					
-	private Float price;
+	private BigDecimal price;
 	
 	
 	@JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
@@ -279,13 +280,13 @@ public class ErshoutushuEntity<T> implements Serializable {
 	/**
 	 * 设置：价格
 	 */
-	public void setPrice(Float price) {
+	public void setPrice(BigDecimal price) {
 		this.price = price;
 	}
 	/**
 	 * 获取：价格
 	 */
-	public Float getPrice() {
+	public BigDecimal getPrice() {
 		return price;
 	}
 

@@ -55,7 +55,7 @@ public class FileController{
 		if(!path.exists()) {
 		    path = new File("");
 		}
-		File upload = new File(path.getAbsolutePath(),"/upload/");
+		File upload = new File(path.getAbsolutePath(),"/target/classes/static/upload/");
 		if(!upload.exists()) {
 		    upload.mkdirs();
 		}

@@ -1,14 +1,7 @@
 package com.controller;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import javax.servlet.http.HttpServletRequest;
 
 import com.utils.ValidatorUtils;
@@ -126,7 +119,7 @@ public class ErshoutushuController {
     @RequestMapping("/detail/{id}")
     public R detail(@PathVariable("id") Long id){
         ErshoutushuEntity ershoutushu = ershoutushuService.selectById(id);
-		ershoutushu.setClicknum(ershoutushu.getClicknum()+1);
+		ershoutushu.setClicknum(Objects.nonNull(ershoutushu.getClicknum()) ? ershoutushu.getClicknum() + 1 : 1);
 		ershoutushu.setClicktime(new Date());
 		ershoutushuService.updateById(ershoutushu);
         return R.ok().put("data", ershoutushu);

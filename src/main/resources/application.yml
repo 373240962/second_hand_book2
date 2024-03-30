@@ -4,19 +4,15 @@ server:
         uri-encoding: UTF-8
     port: 8080
     servlet:
-        context-path: /springbootoc81w
+        context-path: /second-hand-book
 
 spring:
     datasource:
         driverClassName: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/springbootoc81w?useUnicode=true&characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8
+        url: jdbc:mysql://127.0.0.1:3306/second_hand_book?useUnicode=true&characterEncoding=utf-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8
         username: root
         password: 123456
 
-#        driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
-#        url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=springbootoc81w
-#        username: sa
-#        password: 123456
 
     servlet:
       multipart:

@@ -2,23 +2,14 @@ package com.entity;
 
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import java.lang.reflect.InvocationTargetException;
-
-import java.io.Serializable;
-import java.util.Date;
-import java.util.List;
-
-import org.springframework.format.annotation.DateTimeFormat;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.apache.commons.beanutils.BeanUtils;
-import com.baomidou.mybatisplus.annotations.TableField;
-import com.baomidou.mybatisplus.enums.FieldFill;
-import com.baomidou.mybatisplus.enums.IdType;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.io.Serializable;
+import java.lang.reflect.InvocationTargetException;
+import java.math.BigDecimal;
+import java.util.Date;
 
 
 /**
@@ -97,25 +88,25 @@ public class OrdersEntity<T> implements Serializable {
 	 * 价格
 	 */
 					
-	private Float price;
+	private BigDecimal price;
 	
 	/**
 	 * 折扣价格
 	 */
 					
-	private Float discountprice;
+	private BigDecimal discountprice;
 	
 	/**
 	 * 总价格
 	 */
 					
-	private Float total;
+	private BigDecimal total;
 	
 	/**
 	 * 折扣总价格
 	 */
 					
-	private Float discounttotal;
+	private BigDecimal discounttotal;
 	
 	/**
 	 * 支付类型
@@ -265,49 +256,49 @@ public class OrdersEntity<T> implements Serializable {
 	/**
 	 * 设置：价格
 	 */
-	public void setPrice(Float price) {
+	public void setPrice(BigDecimal price) {
 		this.price = price;
 	}
 	/**
 	 * 获取：价格
 	 */
-	public Float getPrice() {
+	public BigDecimal getPrice() {
 		return price;
 	}
 	/**
 	 * 设置：折扣价格
 	 */
-	public void setDiscountprice(Float discountprice) {
+	public void setDiscountprice(BigDecimal discountprice) {
 		this.discountprice = discountprice;
 	}
 	/**
 	 * 获取：折扣价格
 	 */
-	public Float getDiscountprice() {
+	public BigDecimal getDiscountprice() {
 		return discountprice;
 	}
 	/**
 	 * 设置：总价格
 	 */
-	public void setTotal(Float total) {
+	public void setTotal(BigDecimal total) {
 		this.total = total;
 	}
 	/**
 	 * 获取：总价格
 	 */
-	public Float getTotal() {
+	public BigDecimal getTotal() {
 		return total;
 	}
 	/**
 	 * 设置：折扣总价格
 	 */
-	public void setDiscounttotal(Float discounttotal) {
+	public void setDiscounttotal(BigDecimal discounttotal) {
 		this.discounttotal = discounttotal;
 	}
 	/**
 	 * 获取：折扣总价格
 	 */
-	public Float getDiscounttotal() {
+	public BigDecimal getDiscounttotal() {
 		return discounttotal;
 	}
 	/**

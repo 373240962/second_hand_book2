@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.lang.reflect.InvocationTargetException;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -97,7 +98,7 @@ public class MaijiayonghuEntity<T> implements Serializable {
 	 * 余额
 	 */
 					
-	private Float money;
+	private BigDecimal money;
 	
 	
 	@JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
@@ -205,13 +206,13 @@ public class MaijiayonghuEntity<T> implements Serializable {
 	/**
 	 * 设置：余额
 	 */
-	public void setMoney(Float money) {
+	public void setMoney(BigDecimal money) {
 		this.money = money;
 	}
 	/**
 	 * 获取：余额
 	 */
-	public Float getMoney() {
+	public BigDecimal getMoney() {
 		return money;
 	}
 
